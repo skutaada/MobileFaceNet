@@ -12,7 +12,7 @@ from retinaface.utils.nms.py_cpu_nms import py_cpu_nms
 
 
 class RetinafaceDetector:
-    def __init__(self, net='mnet', type='cuda'):
+    def __init__(self, net='mnet', type='cpu'):
         cudnn.benchmark = True
         self.net = net
         self.device = torch.device(type)
